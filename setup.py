@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="python-live-client",
-    version="0.0.2",
+    version="0.0.3",
     author="Intelie",
     author_email="python@intelie.com",
     description="Intelie Live Client written in Python",
@@ -18,5 +18,16 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
+    install_requires=[
+        'aiocometd',
+        'requests',
+        'asyncio',
+        'typing',
+        'abc',
+        'sys',
+        'json',
+        'socket',
+        'logging'
+    ]
 )
 
