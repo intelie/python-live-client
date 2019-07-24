@@ -71,6 +71,9 @@ class CometdClient:
                 for listener in query.listeners:
                     listener.on_event(data)
 
+    def add_queries(self, queries: QueryList = []):
+        self.queries.extend(queries)
+
     def execute(self):
         loop = asyncio.get_event_loop()
         loop.run_until_complete(self.__subscribe_and_run())
