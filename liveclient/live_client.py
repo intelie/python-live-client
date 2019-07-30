@@ -1,6 +1,6 @@
 import json
-from tcp_live_client import TcpClient
-from cometd_live_client import CometdClient
+from liveclient.tcp_live_client import TcpClient
+from liveclient.cometd_live_client import CometdClient
 
 
 class LiveClient:

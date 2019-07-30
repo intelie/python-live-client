@@ -1,4 +1,6 @@
 __pycache__
 ENV
 dist
-python_live_client.egg-info/
+build
+liveclient.egg-info
+
