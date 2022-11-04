@@ -47,8 +47,9 @@ class CometdClient:
         return payload
 
     def __get_channels(self):
+        headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
         request = self.session.post(
-            self.server + "/rest/query", json=self.__request_payload())
+            self.server + "/rest/query", json=self.__request_payload(), headers=headers)
         request.raise_for_status()
         channels = [
             item.get('channel')
